@@ -23,6 +23,7 @@ from Ecommerce2.settings import MEDIA_URL
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('store.urls'),)
+    path('',include('store.urls')),
+    path('api/',include('store.api.urls'))
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
